@@ -250,7 +250,7 @@ dict:
     id: 270
     name_rus: 'Калининградская область'
     name_datawrapper: 'Kaliningrad'
-    alternative_name: []
+    alternative_name: ['Калинингpадская область']
     okato: '27000000'
     oktmo: '27000000'
     level: 'регион'
@@ -626,9 +626,9 @@ dict:
     parent_id: 7
   khanty-mansi:
     id: 718
-    name_rus: 'Ханты-Мансийский автономный округ - Югра'
+    name_rus: 'Ханты-Мансийский автономный округ – Югра'
     name_datawrapper: 'Khanty-Mansi'
-    alternative_name: []
+    alternative_name: ['Ханты-Мансийский автономный округ – Югра']
     okato: '71100000'
     oktmo: '71800000'
     level: 'регион'
