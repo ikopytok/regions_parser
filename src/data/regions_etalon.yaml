@@ -1,0 +1,869 @@
+---
+version: v1.0
+title: Эталонный справочник наименований регионов, кодов ОКАТО и ОКТМО проекта Если быть точным
+
+dict:
+  russia:
+    id: 1
+    name_rus: 'Российская Федерация'
+    name_datawrapper: 'Russian Federation'
+    alternative_name: []
+    okato: '00000000'
+    oktmo: '00000000'
+    level: 'страна'
+    parent_id: None
+  central_fd:
+    id: 2
+    name_rus: 'Центральный федеральный округ'
+    name_datawrapper: 'Central Federal District'
+    alternative_name: []
+    okato: '00000000'
+    oktmo: '00000000'
+    level: 'федеральный округ'
+    parent_id: 1
+  belgorod:
+    id: 140
+    name_rus: 'Белгородская область'
+    name_datawrapper: 'Belgorod'
+    alternative_name: []
+    okato: '14000000'
+    oktmo: '14000000'
+    level: 'регион'
+    parent_id: 2
+  bryansk:
+    id: 150
+    name_rus: 'Брянская область'
+    name_datawrapper: 'Bryansk'
+    alternative_name: []
+    okato: '15000000'
+    oktmo: '15000000'
+    level: 'регион'
+    parent_id: 2
+  vladimir:
+    id: 170
+    name_rus: 'Владимирская область'
+    name_datawrapper: 'Vladimir'
+    alternative_name: []
+    okato: '17000000'
+    oktmo: '17000000'
+    level: 'регион'
+    parent_id: 2
+  voronezh:
+    id: 200
+    name_rus: 'Воронежская область'
+    name_datawrapper: 'Voronezh'
+    alternative_name: []
+    okato: '20000000'
+    oktmo: '20000000'
+    level: 'регион'
+    parent_id: 2
+  ivanovo:
+    id: 240
+    name_rus: 'Ивановская область'
+    name_datawrapper: 'Ivanovo'
+    alternative_name: []
+    okato: '24000000'
+    oktmo: '24000000'
+    level: 'регион'
+    parent_id: 2
+  kaluga:
+    id: 290
+    name_rus: 'Калужская область'
+    name_datawrapper: 'Kaluga'
+    alternative_name: []
+    okato: '29000000'
+    oktmo: '29000000'
+    level: 'регион'
+    parent_id: 2
+  kostroma:
+    id: 340
+    name_rus: 'Костромская область'
+    name_datawrapper: 'Kostroma'
+    alternative_name: []
+    okato: '34000000'
+    oktmo: '34000000'
+    level: 'регион'
+    parent_id: 2
+  kursk:
+    id: 380
+    name_rus: 'Курская область'
+    name_datawrapper: 'Kursk'
+    alternative_name: []
+    okato: '38000000'
+    oktmo: '38000000'
+    level: 'регион'
+    parent_id: 2
+  lipetsk:
+    id: 420
+    name_rus: 'Липецкая область'
+    name_datawrapper: 'Lipetsk'
+    alternative_name: []
+    okato: '42000000'
+    oktmo: '42000000'
+    level: 'регион'
+    parent_id: 2
+  moskovskaya:
+    id: 460
+    name_rus: 'Московская область'
+    name_datawrapper: 'Moskovskaya'
+    alternative_name: []
+    okato: '46000000'
+    oktmo: '46000000'
+    level: 'регион'
+    parent_id: 2
+  oryol:
+    id: 540
+    name_rus: 'Орловская область'
+    name_datawrapper: 'Oryol'
+    alternative_name: []
+    okato: '54000000'
+    oktmo: '54000000'
+    level: 'регион'
+    parent_id: 2
+  ryazan:
+    id: 610
+    name_rus: 'Рязанская область'
+    name_datawrapper: 'Ryazan'
+    alternative_name: []
+    okato: '61000000'
+    oktmo: '61000000'
+    level: 'регион'
+    parent_id: 2
+  smolensk:
+    id: 660
+    name_rus: 'Смоленская область'
+    name_datawrapper: 'Smolensk'
+    alternative_name: []
+    okato: '66000000'
+    oktmo: '66000000'
+    level: 'регион'
+    parent_id: 2
+  tambov:
+    id: 680
+    name_rus: 'Тамбовская область'
+    name_datawrapper: 'Tambov'
+    alternative_name: []
+    okato: '68000000'
+    oktmo: '68000000'
+    level: 'регион'
+    parent_id: 2
+  tver:
+    id: 280
+    name_rus: 'Тверская область'
+    name_datawrapper: 'Tver'
+    alternative_name: []
+    okato: '28000000'
+    oktmo: '28000000'
+    level: 'регион'
+    parent_id: 2
+  tula:
+    id: 700
+    name_rus: 'Тульская область'
+    name_datawrapper: 'Tver'
+    alternative_name: []
+    okato: '70000000'
+    oktmo: '70000000'
+    level: 'регион'
+    parent_id: 2
+  yaroslavl:
+    id: 780
+    name_rus: 'Ярославская область'
+    name_datawrapper: 'Yaroslavl'
+    alternative_name: []
+    okato: '78000000'
+    oktmo: '78000000'
+    level: 'регион'
+    parent_id: 2
+  moskva:
+    id: 450
+    name_rus: 'г. Москва'
+    name_datawrapper: 'Moskva'
+    alternative_name: ['Москва', 'город Москва']
+    okato: '45000000'
+    oktmo: '45000000'
+    level: 'регион'
+    parent_id: 2
+  northwestern_fd:
+    id: 3
+    name_rus: 'Северо-Западный федеральный округ'
+    name_datawrapper: 'Northwestern Federal District'
+    alternative_name: []
+    okato: '00000000'
+    oktmo: '00000000'
+    level: 'федеральный округ'
+    parent_id: 1
+  karelia:
+    id: 860
+    name_rus: 'Республика Карелия'
+    name_datawrapper: 'Karelia'
+    alternative_name: []
+    okato: '86000000'
+    oktmo: '86000000'
+    level: 'регион'
+    parent_id: 3
+  komi:
+    id: 870
+    name_rus: 'Республика Коми'
+    name_datawrapper: 'Komi'
+    alternative_name: []
+    okato: '87000000'
+    oktmo: '87000000'
+    level: 'регион'
+    parent_id: 3
+  arkhangelsk:
+    id: 110
+    name_rus: 'Архангельская область'
+    name_datawrapper: 'Arkhangelsk'
+    alternative_name: []
+    okato: '11000000'
+    oktmo: '11000000'
+    level: 'регион'
+    parent_id: 3
+  nenets:
+    id: 111
+    name_rus: 'Ненецкий автономный округ'
+    name_datawrapper: 'Nenets'
+    alternative_name: []
+    okato: '11100000'
+    oktmo: '11800000'
+    level: 'регион'
+    parent_id: 110
+  arkhangelsk-withoit-nenets:
+    id: 112
+    name_rus: 'Архангельская область без автономного округа'
+    name_datawrapper: 'Arkhangelskaya without Nenets Autonomous Okrug'
+    alternative_name: []
+    okato: '11200000'
+    oktmo: '11800000'
+    level: 'регион'
+    parent_id: 110
+  vologda:
+    id: 190
+    name_rus: 'Вологодская область'
+    name_datawrapper: 'Vologda'
+    alternative_name: []
+    okato: '19000000'
+    oktmo: '19000000'
+    level: 'регион'
+    parent_id: 3
+  kaliningrad:
+    id: 270
+    name_rus: 'Калининградская область'
+    name_datawrapper: 'Kaliningrad'
+    alternative_name: []
+    okato: '27000000'
+    oktmo: '27000000'
+    level: 'регион'
+    parent_id: 3
+  leningrad:
+    id: 410
+    name_rus: 'Ленинградская область'
+    name_datawrapper: 'Leningrad'
+    alternative_name: []
+    okato: '41000000'
+    oktmo: '41000000'
+    level: 'регион'
+    parent_id: 3
+  murmansk:
+    id: 470
+    name_rus: 'Мурманская область'
+    name_datawrapper: 'Murmansk'
+    alternative_name: []
+    okato: '47000000'
+    oktmo: '47000000'
+    level: 'регион'
+    parent_id: 3
+  novgorod:
+    id: 490
+    name_rus: 'Новгородская область'
+    name_datawrapper: 'Novgorod'
+    alternative_name: []
+    okato: '49000000'
+    oktmo: '49000000'
+    level: 'регион'
+    parent_id: 3
+  pskov:
+    id: 580
+    name_rus: 'Псковская область'
+    name_datawrapper: 'Pskov'
+    alternative_name: []
+    okato: '58000000'
+    oktmo: '58000000'
+    level: 'регион'
+    parent_id: 3
+  saint-petersburg:
+    id: 400
+    name_rus: 'г. Санкт-Петербург'
+    name_datawrapper: 'Saint Petersburg'
+    alternative_name: []
+    okato: '40000000'
+    oktmo: '40000000'
+    level: 'регион'
+    parent_id: 3
+  southern_fd:
+    id: 4
+    name_rus: 'Южный федеральный округ'
+    name_datawrapper: 'Southern Federal District'
+    alternative_name: []
+    okato: '00000000'
+    oktmo: '00000000'
+    level: 'федеральный округ'
+    parent_id: 1
+  adygea:
+    id: 790
+    name_rus: 'Республика Адыгея'
+    name_datawrapper: 'Adygea'
+    alternative_name: []
+    okato: '79000000'
+    oktmo: '79000000'
+    level: 'регион'
+    parent_id: 4
+  kalmykia:
+    id: 850
+    name_rus: 'Республика Калмыкия'
+    name_datawrapper: 'Kalmykia'
+    alternative_name: []
+    okato: '85000000'
+    oktmo: '85000000'
+    level: 'регион'
+    parent_id: 4
+  сrimea:
+    id: 350
+    name_rus: 'Республика Крым'
+    name_datawrapper: 'Crimea'
+    alternative_name: []
+    okato: '35000000'
+    oktmo: '35000000'
+    level: 'регион'
+    parent_id: 4
+  krasnodar:
+    id: 30
+    name_rus: 'Краснодарский край'
+    name_datawrapper: 'Krasnodar'
+    alternative_name: []
+    okato: '030000000'
+    oktmo: '030000000'
+    level: 'регион'
+    parent_id: 4
+  astrakhan:
+    id: 120
+    name_rus: 'Астраханская область'
+    name_datawrapper: 'Astrakhan'
+    alternative_name: []
+    okato: '120000000'
+    oktmo: '120000000'
+    level: 'регион'
+    parent_id: 4
+  volgograd:
+    id: 180
+    name_rus: 'Волгоградская область'
+    name_datawrapper: 'Volgograd'
+    alternative_name: []
+    okato: '180000000'
+    oktmo: '180000000'
+    level: 'регион'
+    parent_id: 4
+  rostov:
+    id: 600
+    name_rus: 'Ростовская область'
+    name_datawrapper: 'Rostov'
+    alternative_name: []
+    okato: '600000000'
+    oktmo: '600000000'
+    level: 'регион'
+    parent_id: 4
+  sevastopol:
+    id: 670
+    name_rus: 'г. Севастополь'
+    name_datawrapper: 'Sevastopol'
+    alternative_name: []
+    okato: '670000000'
+    oktmo: '670000000'
+    level: 'регион'
+    parent_id: 4
+  north-caucasian_fd:
+    id: 5
+    name_rus: 'Северо-Кавказский федеральный округ'
+    name_datawrapper: 'North Caucasian Federal District'
+    alternative_name: []
+    okato: '00000000'
+    oktmo: '00000000'
+    level: 'федеральный округ'
+    parent_id: 1
+  dagestan:
+    id: 820
+    name_rus: 'Республика Дагестан'
+    name_datawrapper: 'Dagestan'
+    alternative_name: []
+    okato: '82000000'
+    oktmo: '82000000'
+    level: 'регион'
+    parent_id: 5
+  ingushetia:
+    id: 260
+    name_rus: 'Республика Ингушетия'
+    name_datawrapper: 'Ingushetia'
+    alternative_name: []
+    okato: '26000000'
+    oktmo: '26000000'
+    level: 'регион'
+    parent_id: 5
+  kabardino-balkaria:
+    id: 830
+    name_rus: 'Кабардино-Балкарская Республика'
+    name_datawrapper: 'Kabardino-Balkaria'
+    alternative_name: []
+    okato: '83000000'
+    oktmo: '83000000'
+    level: 'регион'
+    parent_id: 5
+  karachay-cherkessia:
+    id: 910
+    name_rus: 'Карачаево-Черкесская Республика'
+    name_datawrapper: 'Karachay-Cherkessia'
+    alternative_name: []
+    okato: '91000000'
+    oktmo: '91000000'
+    level: 'регион'
+    parent_id: 5
+  north-ossetia:
+    id: 900
+    name_rus: 'Республика Северная Осетия – Алания'
+    name_datawrapper: 'North Ossetia'
+    alternative_name: []
+    okato: '90000000'
+    oktmo: '90000000'
+    level: 'регион'
+    parent_id: 5
+  chechnya:
+    id: 960
+    name_rus: 'Чеченская Республика'
+    name_datawrapper: 'Chechnya'
+    alternative_name: []
+    okato: '96000000'
+    oktmo: '96000000'
+    level: 'регион'
+    parent_id: 5
+  stavropol:
+    id: 70
+    name_rus: 'Ставропольский край'
+    name_datawrapper: 'Stavropol'
+    alternative_name: []
+    okato: '07000000'
+    oktmo: '07000000'
+    level: 'регион'
+    parent_id: 5
+  privolzhsky_fd:
+    id: 6
+    name_rus: 'Приволжский федеральный округ'
+    name_datawrapper: 'Privolzhsky Federal District'
+    alternative_name: []
+    okato: '00000000'
+    oktmo: '00000000'
+    level: 'федеральный округ'
+    parent_id: 1
+  bashkortostan:
+    id: 800
+    name_rus: 'Республика Башкортостан'
+    name_datawrapper: 'Bashkortostan'
+    alternative_name: []
+    okato: '80000000'
+    oktmo: '80000000'
+    level: 'регион'
+    parent_id: 6
+  mari-el:
+    id: 880
+    name_rus: 'Республика Марий Эл'
+    name_datawrapper: 'Mari El'
+    alternative_name: []
+    okato: '88000000'
+    oktmo: '88000000'
+    level: 'регион'
+    parent_id: 6
+  mordovia:
+    id: 890
+    name_rus: 'Республика Мордовия'
+    name_datawrapper: 'Mordovia'
+    alternative_name: []
+    okato: '89000000'
+    oktmo: '89000000'
+    level: 'регион'
+    parent_id: 6
+  tatarstan:
+    id: 920
+    name_rus: 'Республика Татарстан'
+    name_datawrapper: 'Tatarstan'
+    alternative_name: []
+    okato: '92000000'
+    oktmo: '92000000'
+    level: 'регион'
+    parent_id: 6
+  udmurt:
+    id: 940
+    name_rus: 'Удмуртская Республика'
+    name_datawrapper: 'Udmurt'
+    alternative_name: []
+    okato: '94000000'
+    oktmo: '94000000'
+    level: 'регион'
+    parent_id: 6
+  chuvashia:
+    id: 970
+    name_rus: 'Чувашская Республика'
+    name_datawrapper: 'Chuvashia'
+    alternative_name: []
+    okato: '97000000'
+    oktmo: '97000000'
+    level: 'регион'
+    parent_id: 6
+  perm:
+    id: 570
+    name_rus: 'Пермский край'
+    name_datawrapper: 'Perm'
+    alternative_name: []
+    okato: '57000000'
+    oktmo: '57000000'
+    level: 'регион'
+    parent_id: 6
+  kirov:
+    id: 330
+    name_rus: 'Кировская область'
+    name_datawrapper: 'Kirov'
+    alternative_name: []
+    okato: '33000000'
+    oktmo: '33000000'
+    level: 'регион'
+    parent_id: 6
+  nizhny-novgorod:
+    id: 220
+    name_rus: 'Нижегородская область'
+    name_datawrapper: 'Nizhny Novgorod'
+    alternative_name: []
+    okato: '22000000'
+    oktmo: '22000000'
+    level: 'регион'
+    parent_id: 6
+  orenburg:
+    id: 530
+    name_rus: 'Оренбургская область'
+    name_datawrapper: 'Orenburg'
+    alternative_name: []
+    okato: '53000000'
+    oktmo: '53000000'
+    level: 'регион'
+    parent_id: 6
+  penza:
+    id: 560
+    name_rus: 'Пензенская область'
+    name_datawrapper: 'Penza'
+    alternative_name: []
+    okato: '56000000'
+    oktmo: '56000000'
+    level: 'регион'
+    parent_id: 6
+  samara:
+    id: 360
+    name_rus: 'Самарская область'
+    name_datawrapper: 'Samara'
+    alternative_name: []
+    okato: '36000000'
+    oktmo: '36000000'
+    level: 'регион'
+    parent_id: 6
+  saratov:
+    id: 630
+    name_rus: 'Саратовская область'
+    name_datawrapper: 'Saratov'
+    alternative_name: []
+    okato: '63000000'
+    oktmo: '63000000'
+    level: 'регион'
+    parent_id: 6
+  ulyanovsk:
+    id: 730
+    name_rus: 'Ульяновская область'
+    name_datawrapper: 'Ulyanovsk'
+    alternative_name: []
+    okato: '73000000'
+    oktmo: '73000000'
+    level: 'регион'
+    parent_id: 6
+  ural_fd:
+    id: 7
+    name_rus: 'Уральский федеральный округ'
+    name_datawrapper: 'Ural Federal District'
+    alternative_name: []
+    okato: '00000000'
+    oktmo: '00000000'
+    level: 'федеральный округ'
+    parent_id: 1
+  kurgan:
+    id: 370
+    name_rus: 'Курганская область'
+    name_datawrapper: 'Kurgan'
+    alternative_name: []
+    okato: '37000000'
+    oktmo: '37000000'
+    level: 'регион'
+    parent_id: 7
+  sverdlovsk:
+    id: 650
+    name_rus: 'Свердловская область'
+    name_datawrapper: 'Sverdlovsk'
+    alternative_name: []
+    okato: '65000000'
+    oktmo: '65000000'
+    level: 'регион'
+    parent_id: 7
+  tyumen:
+    id: 710
+    name_rus: 'Тюменская область'
+    name_datawrapper: 'Tyumen'
+    alternative_name: []
+    okato: '71000000'
+    oktmo: '71000000'
+    level: 'регион'
+    parent_id: 7
+  khanty-mansi:
+    id: 718
+    name_rus: 'Ханты-Мансийский автономный округ - Югра'
+    name_datawrapper: 'Khanty-Mansi'
+    alternative_name: []
+    okato: '71100000'
+    oktmo: '71800000'
+    level: 'регион'
+    parent_id: 710
+  yamalo-nenets:
+    id: 719
+    name_rus: 'Ямало-Ненецкий автономный округ'
+    name_datawrapper: 'Yamalo-Nenets'
+    alternative_name: []
+    okato: '71140000'
+    oktmo: '71900000'
+    level: 'регион'
+    parent_id: 710
+  tyumen-without-okrug:
+    id: 716
+    name_rus: 'Тюменская область без автономных округов'
+    name_datawrapper: 'Yamalo-Nenets'
+    alternative_name: []
+    okato: '71200000'
+    oktmo: '71600000'
+    level: 'регион'
+    parent_id: 710
+  chelyabinsk:
+    id: 750
+    name_rus: 'Челябинская область'
+    name_datawrapper: 'Chelyabinsk'
+    alternative_name: []
+    okato: '75000000'
+    oktmo: '75000000'
+    level: 'регион'
+    parent_id: 7
+  siberian_fd:
+    id: 8
+    name_rus: 'Сибирский федеральный округ'
+    name_datawrapper: 'Siberian Federal District'
+    alternative_name: []
+    okato: '00000000'
+    oktmo: '00000000'
+    level: 'федеральный округ'
+    parent_id: 1
+  gorno-altai:
+    id: 840
+    name_rus: 'Республика Алтай'
+    name_datawrapper: 'Gorno-Altai'
+    alternative_name: []
+    okato: '84000000'
+    oktmo: '84000000'
+    level: 'регион'
+    parent_id: 8
+  tuva:
+    id: 930
+    name_rus: 'Республика Тыва'
+    name_datawrapper: 'Tuva'
+    alternative_name: []
+    okato: '93000000'
+    oktmo: '93000000'
+    level: 'регион'
+    parent_id: 8
+  khakassia:
+    id: 950
+    name_rus: 'Республика Хакасия'
+    name_datawrapper: 'Khakassia'
+    alternative_name: []
+    okato: '95000000'
+    oktmo: '95000000'
+    level: 'регион'
+    parent_id: 8
+  altai:
+    id: 10
+    name_rus: 'Алтайский край'
+    name_datawrapper: 'Altai'
+    alternative_name: []
+    okato: '01000000'
+    oktmo: '01000000'
+    level: 'регион'
+    parent_id: 8
+  krasnoyarsk:
+    id: 40
+    name_rus: 'Красноярский край'
+    name_datawrapper: 'Krasnoyarsk'
+    alternative_name: []
+    okato: '04000000'
+    oktmo: '04000000'
+    level: 'регион'
+    parent_id: 8
+  irkutsk:
+    id: 250
+    name_rus: 'Иркутская область'
+    name_datawrapper: 'Irkutsk'
+    alternative_name: []
+    okato: '25000000'
+    oktmo: '25000000'
+    level: 'регион'
+    parent_id: 8
+  kemerovo:
+    id: 320
+    name_rus: 'Кемеровская область'
+    name_datawrapper: 'Kemerovo'
+    alternative_name: ['Кемеровская область - Кузбасс']
+    okato: '32000000'
+    oktmo: '32000000'
+    level: 'регион'
+    parent_id: 8
+  novosibirsk:
+    id: 500
+    name_rus: 'Новосибирская область'
+    name_datawrapper: 'Novosibirsk'
+    alternative_name: []
+    okato: '50000000'
+    oktmo: '50000000'
+    level: 'регион'
+    parent_id: 8
+  omsk:
+    id: 520
+    name_rus: 'Омская область'
+    name_datawrapper: 'Omsk'
+    alternative_name: []
+    okato: '52000000'
+    oktmo: '52000000'
+    level: 'регион'
+    parent_id: 8
+  tomsk:
+    id: 690
+    name_rus: 'Томская область'
+    name_datawrapper: 'Tomsk'
+    alternative_name: []
+    okato: '69000000'
+    oktmo: '69000000'
+    level: 'регион'
+    parent_id: 8
+  far_eastern_fd:
+    id: 9
+    name_rus: 'Дальневосточный федеральный округ'
+    name_datawrapper: 'Far Eastern Federal District'
+    alternative_name: []
+    okato: '00000000'
+    oktmo: '00000000'
+    level: 'федеральный округ'
+    parent_id: 1
+  buryatia:
+    id: 810
+    name_rus: 'Республика Бурятия'
+    name_datawrapper: 'Buryatia'
+    alternative_name: []
+    okato: '81000000'
+    oktmo: '81000000'
+    level: 'регион'
+    parent_id: 9
+  sakha:
+    id: 980
+    name_rus: 'Республика Саха (Якутия)'
+    name_datawrapper: 'Sakha'
+    alternative_name: []
+    okato: '98000000'
+    oktmo: '98000000'
+    level: 'регион'
+    parent_id: 9
+  zabaykalsky:
+    id: 760
+    name_rus: 'Забайкальский край'
+    name_datawrapper: 'Zabaykalsky'
+    alternative_name: []
+    okato: '76000000'
+    oktmo: '76000000'
+    level: 'регион'
+    parent_id: 9
+  kamchatka:
+    id: 300
+    name_rus: 'Камчатский край'
+    name_datawrapper: 'Kamchatka'
+    alternative_name: []
+    okato: '30000000'
+    oktmo: '30000000'
+    level: 'регион'
+    parent_id: 9
+  primorsky:
+    id: 50
+    name_rus: 'Приморский край'
+    name_datawrapper: 'Primorsky'
+    alternative_name: []
+    okato: '05000000'
+    oktmo: '05000000'
+    level: 'регион'
+    parent_id: 9
+  khabarovsk:
+    id: 80
+    name_rus: 'Хабаровский край'
+    name_datawrapper: 'Khabarovsk'
+    alternative_name: []
+    okato: '08000000'
+    oktmo: '08000000'
+    level: 'регион'
+    parent_id: 9
+  amur:
+    id: 100
+    name_rus: 'Амурская область'
+    name_datawrapper: 'Amur'
+    alternative_name: []
+    okato: '10000000'
+    oktmo: '10000000'
+    level: 'регион'
+    parent_id: 9
+  magadan:
+    id: 440
+    name_rus: 'Магаданская область'
+    name_datawrapper: 'magadan'
+    alternative_name: []
+    okato: '44000000'
+    oktmo: '44000000'
+    level: 'регион'
+    parent_id: 9
+  sakhalin:
+    id: 640
+    name_rus: 'Сахалинская область'
+    name_datawrapper: 'Sakhalin'
+    alternative_name: []
+    okato: '64000000'
+    oktmo: '64000000'
+    level: 'регион'
+    parent_id: 9
+  jewish:
+    id: 990
+    name_rus: 'Еврейская автономная область'
+    name_datawrapper: 'Jewish Autonomous Oblast'
+    alternative_name: []
+    okato: '99000000'
+    oktmo: '99000000'
+    level: 'регион'
+    parent_id: 9
+  chukotka:
+    id: 770
+    name_rus: 'Чукотский автономный округ'
+    name_datawrapper: 'Chukotka'
+    alternative_name: []
+    okato: '77000000'
+    oktmo: '77000000'
+    level: 'регион'
+    parent_id: 9

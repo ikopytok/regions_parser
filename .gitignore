@@ -87,3 +87,6 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# Personal
+1.0-vk-test-read-xlsx.ipynb
