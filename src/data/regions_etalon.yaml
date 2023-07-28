@@ -142,7 +142,7 @@ dict:
     id: 680
     name_rus: 'Тамбовская область'
     name_datawrapper: 'Tambov'
-    alternative_name: []
+    alternative_name: ['Тамбовская']
     okato: '68000000'
     oktmo: '68000000'
     level: 'регион'
@@ -304,7 +304,7 @@ dict:
     id: 4
     name_rus: 'Южный федеральный округ'
     name_datawrapper: 'Southern Federal District'
-    alternative_name: []
+    alternative_name: ['Южный федеральный округ ']
     okato: '00000000'
     oktmo: '00000000'
     level: 'федеральный округ'
@@ -313,7 +313,7 @@ dict:
     id: 790
     name_rus: 'Республика Адыгея'
     name_datawrapper: 'Adygea'
-    alternative_name: []
+    alternative_name: ['Республтка Адыгея']
     okato: '79000000'
     oktmo: '79000000'
     level: 'регион'
@@ -430,7 +430,7 @@ dict:
     id: 900
     name_rus: 'Республика Северная Осетия – Алания'
     name_datawrapper: 'North Ossetia'
-    alternative_name: []
+    alternative_name: ['Республика Северная Осетия –Алания', 'Республика Северная Осетия-Алания', 'Республика Северная Осетия_Алания', 'Республика Северная Осетия - Алания']
     okato: '90000000'
     oktmo: '90000000'
     level: 'регион'
@@ -628,7 +628,7 @@ dict:
     id: 718
     name_rus: 'Ханты-Мансийский автономный округ – Югра'
     name_datawrapper: 'Khanty-Mansi'
-    alternative_name: ['Ханты-Мансийский автономный округ – Югра']
+    alternative_name: ['Ханты Мансийский автономный округ - Югра', 'Ханты-Мансийский автономный округ – Югра', 'Ханты-Ман­сийский автономный округ – Югра', 'Ханты-Мансийский автономный округ - Югра']
     okato: '71100000'
     oktmo: '71800000'
     level: 'регион'
@@ -664,7 +664,7 @@ dict:
     id: 8
     name_rus: 'Сибирский федеральный округ'
     name_datawrapper: 'Siberian Federal District'
-    alternative_name: []
+    alternative_name: ['Сибирский федеральный округ ']
     okato: '00000000'
     oktmo: '00000000'
     level: 'федеральный округ'
@@ -763,7 +763,7 @@ dict:
     id: 9
     name_rus: 'Дальневосточный федеральный округ'
     name_datawrapper: 'Far Eastern Federal District'
-    alternative_name: []
+    alternative_name: ['Дальневосточный федеральный округ ']
     okato: '00000000'
     oktmo: '00000000'
     level: 'федеральный округ'

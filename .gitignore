@@ -90,3 +90,7 @@ target/
 
 # Personal
 1.0-vk-test-read-xlsx.ipynb
+*files/
+*__pycache__/
+*csv/
+*.idea/

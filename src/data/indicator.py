@@ -21,7 +21,7 @@ class Indicator:
     def find_names(self):
         """Search indicator name, section, unit and code in dataframe (first column)."""
 
-        # Ищем все в первой колонке датафрема, который получили из листа файла xlsx
+        # Ищем все в первой колонке датафрейма, который получили из листа файла xlsx
         first_column = self.data.iloc[:, 0].apply(lambda x: ' '.join(x.split()) if not pd.isna(x) else x)
         # Нужная нам инфа до строки, в которой указано Российская Федерация
         text_to_find = "Российская Федерация"
@@ -45,23 +45,22 @@ class Indicator:
             if index_of_row[0] == 7:
                 self.section = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[1]).strip()).replace('1)', '')
 
-                self.name = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[3]).strip().replace('1)', '')) + ': ' + \
-                            self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[4]).strip().replace('1)', ''))
+                self.name = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[3]).strip().replace('1)', ''))
 
-                self.unit = first_column[5].strip("()").replace(';', ',') + special_for_russia
-                self.code = ''.join([part.zfill(2) for part in re.match(r'^[\d.]+',
-                                                                        first_column[4]).group().split('.')]).ljust(8,
-                                                                                                                    '0')
+                # if not pd.isnull(first_column[5]):
+                self.unit = first_column[4].strip(")").strip("(").replace(';', ',') + special_for_russia
+                self.code = ''.join([part.zfill(2) for part in re.match(r'^[\d.]+', first_column[3]).group().split('.')]).ljust(8, '0')
             elif index_of_row[0] == 6:
                 self.section = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[1]).strip()).replace('1)', '')
+                if not pd.isnull(first_column[2]):
 
-                self.name = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[2]).strip().replace('1)', '')) + ': ' + \
-                            self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[3]).strip().replace('1)', ''))
+                    self.name = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[2]).strip().replace('1)', '')) + ': ' + \
+                                self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[3]).strip().replace('1)', ''))
+                else:
+                    self.name = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[3]).strip().replace('1)', ''))
 
                 self.unit = first_column[4].strip("()").replace(';', ',') + special_for_russia
-                self.code = ''.join([part.zfill(2) for part in re.match(r'^[\d.]+',
-                                                                        first_column[3]).group().split('.')]).ljust(8,
-                                                                                                                    '0')
+                self.code = ''.join([part.zfill(2) for part in re.match(r'^[\d.]+', first_column[3]).group().split('.')]).ljust(8, '0')
             elif index_of_row[0] == 5:
                 self.section = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[1]).strip()).replace('1)', '')
 
@@ -73,15 +72,19 @@ class Indicator:
                                                                                                                     '0')
             elif index_of_row[0] == 4:
                 self.section = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[1]).strip()).replace('1)', '')
-                self.name = self.lower_sentence(
-                    re.sub(r'^[\d.]+', '', first_column[2][:first_column[2].index(' на 10')].strip().replace('1)', '')))
-                self.unit = first_column[2][first_column[2].index(' на 10'):].strip().replace('1)', '') + special_for_russia
+                if ' на 10' in first_column[2]:
+                    self.name = self.lower_sentence(
+                        re.sub(r'^[\d.]+', '', first_column[2][:first_column[2].index(' на 10')].strip().replace('1)', '')))
+                    self.unit = first_column[2][first_column[2].index(' на 10'):].strip().replace('1)', '') + special_for_russia
+                else:
+                    self.name = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[2].strip().replace('1)', '')))
+                    self.unit = first_column[2].strip().replace('1)', '') + special_for_russia
                 self.code = ''.join([part.zfill(2) for part in re.match(r'^[\d.]+',
                                                                         first_column[2]).group().split('.')]).ljust(8,
                                                                                                                     '0')
             else:
                 raise ValueError("Row index for Russian Federation is not rigth.")
-
+            # print(f'section {self.section}, name {self.name}, unit {self.unit}, code {self.code}')
         return self.section, self.name, self.unit, self.code
 
     def lower_sentence(self, sentence: str):

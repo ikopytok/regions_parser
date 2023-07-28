@@ -1,6 +1,7 @@
 """Class to process regions names."""
 import pandas as pd
 import yaml
+import re
 
 
 class ObjectInfo:
@@ -39,24 +40,27 @@ class ObjectInfo:
         object_indexes = {}
 
         for i in range(index_start, index_end):
-            # Iterate over rows between start and end. Try to find region name in dict. Add info (level, oktmo, okato
-            # from dict.
             if 'в том числе:' in first_column[i]:
                 pass
             else:
                 if 'Российская Федерация' in first_column[i]:
                     object_indexes['Российская Федерация'] = ['страна', '00000000', '00000000', i]
                 else:
-                    reg_name = first_column[i].replace('p', 'р').replace('o', 'о').replace('2)', '').replace('1)', '')
+
+                    reg_name = first_column[i].replace('p', 'р').replace('o', 'о').replace(';', '').strip()
+                    reg_name = re.sub(r'\d+[)]', '', reg_name)
                     for j in self.full_description['dict']:
-                        if (reg_name == self.full_description['dict'][j]['name_rus']) | \
-                                (reg_name in self.full_description['dict'][j]['alternative_name']):
+                        if (reg_name == self.full_description['dict'][j]['name_rus']) or \
+                                reg_name in self.full_description['dict'][j]['alternative_name']:
 
                             object_indexes[self.full_description['dict'][j]['name_rus']] = [self.full_description['dict'][j]['level'],
                                                                                             self.full_description['dict'][j]['oktmo'],
                                                                                             self.full_description['dict'][j]['okato'], i]
+                            if reg_name in self.full_description['dict'][j]['alternative_name']:
+                                reg_name = self.full_description['dict'][j]['name_rus']
+
                     if reg_name not in object_indexes.keys():
-                        print(first_column[i])
+                        print(reg_name)
                         raise ValueError("Region was not found")
 
         self.objects = object_indexes
