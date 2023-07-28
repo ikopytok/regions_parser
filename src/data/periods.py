@@ -24,11 +24,7 @@ class Periods:
             raise ValueError("Period string is not find.")
         elif len(index_of_row) >= 2:
             row = None
-            if len(index_of_row) == 3:
-                index_of_row = index_of_row[:-1]
-                print(index_of_row)
             for el in index_of_row:
-                row = 5
                 if not pd.isna(self.data.iloc[el, 2]):
                     if self.data.iloc[el, 2].startswith('2'):
                         row = el

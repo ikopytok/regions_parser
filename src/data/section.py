@@ -119,11 +119,11 @@ class Section:
 
 
 if __name__ == '__main__':
-    PATH_TO_FILE = "files/Раздел 20 - Цены и тарифы.xlsx"  # Write here path to xlsx file with data.
+    PATH_TO_FILE = "files/"  # Write here path to xlsx file with data.
     PATH_TO_DICT = "regions_etalon.yaml"  # Write here path to regions_etalon.yaml file with regions dictionary.
     section = Section(PATH_TO_FILE, PATH_TO_DICT)
     data = section.process_section()
-    data.to_csv('csv/section_20.csv', index=False, sep=";", encoding="utf-8")
+    data.to_csv('csv/section_17.csv', index=False, sep=";", encoding="utf-8")
 
     print(data.head())
 
