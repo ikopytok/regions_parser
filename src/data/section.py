@@ -42,7 +42,7 @@ class Section:
 
     @staticmethod
     def skip_value(val):
-        if val in ('…', ' - ', '-', ' -', '- ', '...',  '–', '..', '….', '−'):
+        if val in ('…', ' - ', '-', ' -', '- ', '...',  '–', '..', '….', '−', '        …', '... ', '...  ', ' ...'):
             return True
         return False
 
@@ -97,7 +97,7 @@ class Section:
                     value = df.loc[info[3], periods.periods[year]]
                     if pd.isna(value):
                         value = -99999999
-                    elif self.skip_value(re.sub(r'\s+', '', value)):
+                    elif self.skip_value(value):
                         value = -88888888
                     elif ' р.' in value:
                         value = round(float(value.replace('в ', '').replace(' р.', '').replace(',', '.').strip())*100, 4)
@@ -109,7 +109,7 @@ class Section:
                             value = round(float(value), 4)
                         except ValueError:
                             value = re.sub(r'\s+', '', str(value).replace(',', '.'))
-                            value = round(float(value), 4) if not self.skip_value(value) else -88888888 
+                            value = round(float(value), 4) if not self.skip_value(value) else -88888888
 
                 else:
                     value = -99999999
@@ -119,11 +119,11 @@ class Section:
 
 
 if __name__ == '__main__':
-    PATH_TO_FILE = "files/Раздел 21 - Внешняя торговля.xlsx"  # Write here path to xlsx file with data.
+    PATH_TO_FILE = "files/Раздел 20 - Цены и тарифы.xlsx"  # Write here path to xlsx file with data.
     PATH_TO_DICT = "regions_etalon.yaml"  # Write here path to regions_etalon.yaml file with regions dictionary.
     section = Section(PATH_TO_FILE, PATH_TO_DICT)
     data = section.process_section()
-    data.to_csv('section_21.csv', index=False, sep=";", encoding="utf-8")
+    data.to_csv('csv/section_20.csv', index=False, sep=";", encoding="utf-8")
 
     print(data.head())
 
