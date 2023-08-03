@@ -295,7 +295,7 @@ dict:
     id: 400
     name_rus: 'г. Санкт-Петербург'
     name_datawrapper: 'Saint Petersburg'
-    alternative_name: []
+    alternative_name: ['г. Санкт Петербург']
     okato: '40000000'
     oktmo: '40000000'
     level: 'регион'
@@ -430,7 +430,7 @@ dict:
     id: 900
     name_rus: 'Республика Северная Осетия – Алания'
     name_datawrapper: 'North Ossetia'
-    alternative_name: []
+    alternative_name: ['Республика Северная Осетия - Алания']
     okato: '90000000'
     oktmo: '90000000'
     level: 'регион'
@@ -448,7 +448,7 @@ dict:
     id: 70
     name_rus: 'Ставропольский край'
     name_datawrapper: 'Stavropol'
-    alternative_name: []
+    alternative_name: ['Ставропольский край.']
     okato: '07000000'
     oktmo: '07000000'
     level: 'регион'
@@ -799,7 +799,7 @@ dict:
     id: 300
     name_rus: 'Камчатский край'
     name_datawrapper: 'Kamchatka'
-    alternative_name: []
+    alternative_name: ['Камчатская область']
     okato: '30000000'
     oktmo: '30000000'
     level: 'регион'

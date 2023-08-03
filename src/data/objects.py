@@ -41,13 +41,23 @@ class ObjectInfo:
         for i in range(index_start, index_end):
             # Iterate over rows between start and end. Try to find region name in dict. Add info (level, oktmo, okato
             # from dict.
-            if 'в том числе:' in first_column[i]:
+            if 'в том числе' in first_column[i]:
                 pass
             else:
                 if 'Российская Федерация' in first_column[i]:
                     object_indexes['Российская Федерация'] = ['страна', '00000000', '00000000', i]
                 else:
-                    reg_name = first_column[i].replace('p', 'р').replace('o', 'о').replace('2)', '').replace('1)', '')
+                    replacements = {'1)': '',
+                                    ';2)': '', ' 2)': '',
+                                    ';3)': '', '3);': '', '3)': '',
+                                    '2)': '',
+                                    'p': 'р',
+                                    'o': 'о',
+                                    '4)': '', ' 4)': '',
+                                    '5) ': '', ' 5)': '', ' - ': ' – ', ' -': ' – '}
+
+                    reg_name = self.process_string(first_column[i], replacements).strip()
+
                     for j in self.full_description['dict']:
                         if (reg_name == self.full_description['dict'][j]['name_rus']) | \
                                 (reg_name in self.full_description['dict'][j]['alternative_name']):
@@ -55,12 +65,29 @@ class ObjectInfo:
                             object_indexes[self.full_description['dict'][j]['name_rus']] = [self.full_description['dict'][j]['level'],
                                                                                             self.full_description['dict'][j]['oktmo'],
                                                                                             self.full_description['dict'][j]['okato'], i]
+
+                            if reg_name in self.full_description['dict'][j]['alternative_name']:
+                                reg_name = self.full_description['dict'][j]['name_rus']
+
                     if reg_name not in object_indexes.keys():
                         print(first_column[i])
+                        print(reg_name)
                         raise ValueError("Region was not found")
 
         self.objects = object_indexes
         return self.objects
+
+    def process_string(self, sentence: str, repl: dict):
+        """
+        Process string and remove non-importamt items.
+        :param sentence:
+        :param repl:
+        :return:
+        """
+        for old_value, new_value in repl.items():
+            sentence = sentence.replace(old_value, new_value)
+
+        return sentence
 
 
 if __name__ == '__main__':

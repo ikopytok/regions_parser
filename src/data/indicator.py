@@ -42,43 +42,33 @@ class Indicator:
             Позиции можно вычислить относительно строки, в которой есть Российская Федерация.
             Внутри if просто аккуратно обрабатываем строки и собираем нужную информацию.
             """
-            if index_of_row[0] == 7:
-                self.section = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[1]).strip()).replace('1)', '')
+            position = index_of_row[0]
+            replacements = {'1)': '', ';2)': '', ';3)': '', ';': ',', 'оквэд': 'ОКВЭД', ' снг': ' СНГ'}
 
-                self.name = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[3]).strip().replace('1)', '')) + ': ' + \
-                            self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[4]).strip().replace('1)', ''))
+            if position >= 6:
+                self.section = self.process_string(first_column[1], replacements)
 
-                self.unit = first_column[5].strip("()").replace(';', ',') + special_for_russia
+                self.name = self.process_string(first_column[position-4], replacements) + ': ' + \
+                            self.process_string(first_column[position-3], replacements)
+
+                self.unit = first_column[position-2].strip("()").replace(';', ',') + special_for_russia
                 self.code = ''.join([part.zfill(2) for part in re.match(r'^[\d.]+',
-                                                                        first_column[4]).group().split('.')]).ljust(8,
-                                                                                                                    '0')
-            elif index_of_row[0] == 6:
-                self.section = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[1]).strip()).replace('1)', '')
-
-                self.name = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[2]).strip().replace('1)', '')) + ': ' + \
-                            self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[3]).strip().replace('1)', ''))
-
-                self.unit = first_column[4].strip("()").replace(';', ',') + special_for_russia
-                self.code = ''.join([part.zfill(2) for part in re.match(r'^[\d.]+',
-                                                                        first_column[3]).group().split('.')]).ljust(8,
+                                                                        first_column[position-3]).group().split('.')]).ljust(8,
                                                                                                                     '0')
             elif index_of_row[0] == 5:
-                self.section = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[1]).strip()).replace('1)', '')
-
-                self.name = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[2]).strip()).replace('1)', '')
-
+                self.section = self.process_string(first_column[1], replacements)
+                self.name = self.process_string(first_column[2], replacements)
                 self.unit = first_column[3].strip("()").replace(';', ',') + special_for_russia
                 self.code = ''.join([part.zfill(2) for part in re.match(r'^[\d.]+',
                                                                         first_column[2]).group().split('.')]).ljust(8,
                                                                                                                     '0')
             elif index_of_row[0] == 4:
-                self.section = self.lower_sentence(re.sub(r'^[\d.]+', '', first_column[1]).strip()).replace('1)', '')
+                self.section = self.process_string(first_column[1], replacements)
                 self.name = self.lower_sentence(
                     re.sub(r'^[\d.]+', '', first_column[2][:first_column[2].index(' на 10')].strip().replace('1)', '')))
                 self.unit = first_column[2][first_column[2].index(' на 10'):].strip().replace('1)', '') + special_for_russia
                 self.code = ''.join([part.zfill(2) for part in re.match(r'^[\d.]+',
-                                                                        first_column[2]).group().split('.')]).ljust(8,
-                                                                                                                    '0')
+                                                                        first_column[2]).group().split('.')]).ljust(8,                                                                                                       '0')
             else:
                 raise ValueError("Row index for Russian Federation is not rigth.")
 
@@ -92,6 +82,24 @@ class Indicator:
         """
         sentence = sentence.strip()
         return sentence[0] + sentence[1:].lower()
+
+
+    def process_string(self, sentence: str, repl: dict):
+        """
+        Process string and remove non-importamt items.
+        :param sentence:
+        :param repl:
+        :return:
+        """
+        sentence = re.sub(r'^[\d.]+', '', sentence.strip())
+        sentence = self.lower_sentence(sentence)
+        for old_value, new_value in repl.items():
+            sentence = sentence.replace(old_value, new_value)
+
+        return sentence
+
+
+
 
 
 if __name__ == '__main__':

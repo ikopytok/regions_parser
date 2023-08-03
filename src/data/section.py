@@ -3,7 +3,7 @@ from comment import Comment
 from indicator import Indicator
 from periods import Periods
 from objects import ObjectInfo
-
+import re
 
 
 class Section:
@@ -38,6 +38,13 @@ class Section:
             df = pd.concat([df, pd.DataFrame(data)], axis=0)
         self.data = df
         return df
+
+    @staticmethod
+    def skip_value(val):
+        if val in ('…', ' - ', '-', ' -', '- ', '...',  '–', '..', '….', '−', '        …', '... ', '...  ', ' ...'):
+            return True
+        return False
+
 
     def process_sheet(self, sheet_name: str):
         """
@@ -88,15 +95,22 @@ class Section:
                 #Handling some unsusual values which can't be save as floats.
                 if year in periods.periods.keys():
                     value = df.loc[info[3], periods.periods[year]]
-
                     if pd.isna(value):
                         value = -99999999
-                    elif value in ('…', ' - ', '-', ' -', '- '):
+                    elif self.skip_value(value):
                         value = -88888888
                     elif ' р.' in value:
                         value = round(float(value.replace('в ', '').replace(' р.', '').replace(',', '.').strip())*100, 4)
+                    elif ')' in value:
+                        value = re.sub(r'\d[)]', '', str(value.replace(',', '.')))
+                        value = -88888888 if self.skip_value(value) else round(float(value), 4)
                     else:
-                        value = round(float(value), 4)
+                        try:
+                            value = round(float(value), 4)
+                        except ValueError:
+                            value = re.sub(r'\s+', '', str(value).replace(',', '.'))
+                            value = round(float(value), 4) if not self.skip_value(value) else -88888888
+
                 else:
                     value = -99999999
 
@@ -106,11 +120,11 @@ class Section:
 
 if __name__ == '__main__':
     PATH_TO_FILE = "" # Write here path to xlsx file with data.
-    PATH_TO_DICT = "../regions_etalon.yaml" # Write here path to regions_etalon.yaml file with regions dictionary.
+    PATH_TO_DICT = ".../regions_etalon.yaml" # Write here path to regions_etalon.yaml file with regions dictionary.
 
     section = Section(PATH_TO_FILE, PATH_TO_DICT)
     data = section.process_section()
-    data.to_csv(f"""D:/coding/regions_parser/data/processed/population.csv""", index=False, sep=";", encoding="utf8")
+    data.to_csv(f"""...""", index=False, sep=";", encoding="utf8")
 
     print(data.head())
 
