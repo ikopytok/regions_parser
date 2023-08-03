@@ -341,8 +341,8 @@ dict:
     name_rus: 'Краснодарский край'
     name_datawrapper: 'Krasnodar'
     alternative_name: []
-    okato: '030000000'
-    oktmo: '030000000'
+    okato: '03000000'
+    oktmo: '03000000'
     level: 'регион'
     parent_id: 4
   astrakhan:
@@ -350,8 +350,8 @@ dict:
     name_rus: 'Астраханская область'
     name_datawrapper: 'Astrakhan'
     alternative_name: []
-    okato: '120000000'
-    oktmo: '120000000'
+    okato: '12000000'
+    oktmo: '12000000'
     level: 'регион'
     parent_id: 4
   volgograd:
@@ -359,8 +359,8 @@ dict:
     name_rus: 'Волгоградская область'
     name_datawrapper: 'Volgograd'
     alternative_name: []
-    okato: '180000000'
-    oktmo: '180000000'
+    okato: '18000000'
+    oktmo: '18000000'
     level: 'регион'
     parent_id: 4
   rostov:
@@ -368,8 +368,8 @@ dict:
     name_rus: 'Ростовская область'
     name_datawrapper: 'Rostov'
     alternative_name: []
-    okato: '600000000'
-    oktmo: '600000000'
+    okato: '60000000'
+    oktmo: '60000000'
     level: 'регион'
     parent_id: 4
   sevastopol:
@@ -377,8 +377,8 @@ dict:
     name_rus: 'г. Севастополь'
     name_datawrapper: 'Sevastopol'
     alternative_name: []
-    okato: '670000000'
-    oktmo: '670000000'
+    okato: '67000000'
+    oktmo: '67000000'
     level: 'регион'
     parent_id: 4
   north-caucasian_fd:
