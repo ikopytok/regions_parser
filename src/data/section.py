@@ -41,7 +41,8 @@ class Section:
 
     @staticmethod
     def skip_value(val):
-        if val in ('…', ' - ', '-', ' -', '- ', '...',  '–', '..', '….', '−', '        …', '... ', '...  ', ' ...'):
+        if val in ('…', ' - ', '-', ' -', '- ', '...',  '–', '..',
+                   '….', '−', '        …', '... ', '...  ', ' ...', '‐'):
             return True
         return False
 
@@ -119,12 +120,12 @@ class Section:
 
 
 if __name__ == '__main__':
-    PATH_TO_FILE = "" # Write here path to xlsx file with data.
-    PATH_TO_DICT = ".../regions_etalon.yaml" # Write here path to regions_etalon.yaml file with regions dictionary.
+    PATH_TO_FILE = "D:/coding/regions_parser/data/raw/Pril_Region_Pokaz_2022/Раздел 5 - Здравоохранение.xlsx" # Write here path to xlsx file with data.
+    PATH_TO_DICT = "D:/coding/regions_parser/src/data/regions_etalon.yaml" # Write here path to regions_etalon.yaml file with regions dictionary.
 
     section = Section(PATH_TO_FILE, PATH_TO_DICT)
     data = section.process_section()
-    data.to_csv(f"""...""", index=False, sep=";", encoding="utf8")
+    data.to_csv(f"""D:/coding/regions_parser/data/processed/data_4_healthcare.csv""", index=False, sep=";", encoding="utf8")
 
     print(data.head())
 

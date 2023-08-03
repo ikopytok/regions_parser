@@ -12,6 +12,10 @@ class Comment:
         self.comment = '' # Save here processed text of all footnotes.
         self.data = data
 
+    @staticmethod
+    def lower_comment():
+        pass
+
     def find_comment(self):
         """
         Find all comments in dataframe (strings begining with '*)' chatacters, where * is digit.

@@ -41,7 +41,7 @@ class ObjectInfo:
         for i in range(index_start, index_end):
             # Iterate over rows between start and end. Try to find region name in dict. Add info (level, oktmo, okato
             # from dict.
-            if 'в том числе' in first_column[i]:
+            if (('в том числе' in first_column[i]) | ('уровне' in first_column[i])):
                 pass
             else:
                 if 'Российская Федерация' in first_column[i]:
@@ -50,11 +50,11 @@ class ObjectInfo:
                     replacements = {'1)': '',
                                     ';2)': '', ' 2)': '',
                                     ';3)': '', '3);': '', '3)': '',
-                                    '2)': '',
+                                    '2)': '', ';': '',
                                     'p': 'р',
                                     'o': 'о',
                                     '4)': '', ' 4)': '',
-                                    '5) ': '', ' 5)': '', ' - ': ' – ', ' -': ' – '}
+                                    '5) ': '', ' 5)': '', '5)': '', ' - ': ' – ', ' -': ' – '}
 
                     reg_name = self.process_string(first_column[i], replacements).strip()
 

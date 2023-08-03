@@ -187,7 +187,7 @@ dict:
     id: 3
     name_rus: 'Северо-Западный федеральный округ'
     name_datawrapper: 'Northwestern Federal District'
-    alternative_name: []
+    alternative_name: ['Северо-Западный']
     okato: '00000000'
     oktmo: '00000000'
     level: 'федеральный округ'
@@ -430,7 +430,7 @@ dict:
     id: 900
     name_rus: 'Республика Северная Осетия – Алания'
     name_datawrapper: 'North Ossetia'
-    alternative_name: ['Республика Северная Осетия - Алания']
+    alternative_name: ['Республика Северная Осетия - Алания', 'Республика Северная Осетия-Алания', 'Республика Северная Осетия –Алания']
     okato: '90000000'
     oktmo: '90000000'
     level: 'регион'
@@ -628,7 +628,7 @@ dict:
     id: 718
     name_rus: 'Ханты-Мансийский автономный округ – Югра'
     name_datawrapper: 'Khanty-Mansi'
-    alternative_name: ['Ханты-Мансийский автономный округ – Югра']
+    alternative_name: ['Ханты-Мансийский автономный округ – Югра', 'Ханты-Мансийский автономный округ –Югра', 'Ханты-Мансийский автономный округ-Югра']
     okato: '71100000'
     oktmo: '71800000'
     level: 'регион'
@@ -645,8 +645,8 @@ dict:
   tyumen-without-okrug:
     id: 716
     name_rus: 'Тюменская область без автономных округов'
-    name_datawrapper: 'Yamalo-Nenets'
-    alternative_name: []
+    name_datawrapper: 'Tyumen'
+    alternative_name: ['Тюменская область без автономного округа']
     okato: '71200000'
     oktmo: '71600000'
     level: 'регион'
