@@ -125,7 +125,7 @@ if __name__ == '__main__':
 
     section = Section(PATH_TO_FILE, PATH_TO_DICT)
     data = section.process_section()
-    data.to_csv(f"""D:/coding/regions_parser/data/processed/data_4_healthcare.csv""", index=False, sep=";", encoding="utf8")
+    data.to_csv(f"""D:/coding/regions_parser/data/processed/data_5_healthcare.csv""", index=False, sep=";", encoding="utf8")
 
     print(data.head())
 
