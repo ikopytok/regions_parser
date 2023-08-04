@@ -34,7 +34,7 @@ class ObjectInfo:
 
         text_to_find = "Чукотский автономный округ"
         matching_rows = first_column.str.contains(text_to_find).fillna(False)
-        index_end = matching_rows[matching_rows].index.tolist()[0] # Нашли строку, в которой данные про Чукотский АО
+        index_end = matching_rows[matching_rows].index.tolist()[0] + 1 # Нашли строку, в которой данные про Чукотский АО
 
         object_indexes = {}
 
